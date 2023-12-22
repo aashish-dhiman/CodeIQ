@@ -1,5 +1,4 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { type GetServerSidePropsContext } from "next";
 import {
     getServerSession,
     type NextAuthOptions,
@@ -37,7 +36,7 @@ export const authOptions: NextAuthOptions = {
                 },
             });
             if (db_user) {
-                token.id = db_user.id;
+                token.id = db_user.id.toString();
             }
             return token;
         },
