@@ -10,7 +10,7 @@ interface Props {}
 
 const Navbar = async (props: Props) => {
     const session = await getAuthSession();
-    console.log(session);
+    // console.log(session);
 
     return (
         <nav className="fixed inset-x-0 inset-y-0 min-w-full h-fit z-10 bg-white dark:bg-gray-950 px-5 py-2 shadow-lg dark:shadow-slate-900">

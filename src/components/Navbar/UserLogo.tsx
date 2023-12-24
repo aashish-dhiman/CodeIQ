@@ -58,6 +58,11 @@ const UserLogo = ({ user }: Props) => {
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
+                            <Link href="/dashboard" className="w-full">
+                                Dashboard
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
                             <Link href="/" className="w-full">
                                 Interview Prep
                             </Link>
@@ -85,10 +90,10 @@ const UserLogo = ({ user }: Props) => {
             </DropdownMenu>
 
             {/* for PC version */}
-            <span className=" absolute -bottom-10 text-xs font-medium min-w-fit bg-gray-900 dark:bg-blue-700 text-white px-3 py-[6px] rounded-[20px] whitespace-nowrap transform -translate-x-1/2 left-1/2 select-none hidden sm:block shadow-lg dark:shadow-gray-800">
+            <span className=" absolute -bottom-10 text-xs font-medium min-w-fit bg-blue-700 text-white px-3 py-[6px] rounded-[20px] whitespace-nowrap transform -translate-x-1/2 left-1/2 select-none hidden sm:block shadow-lg dark:shadow-gray-800">
                 Welcome, {user.name && user?.name.split(" ")[0]}
             </span>
-            <div className="absolute -bottom-11 -left-4 w-0 h-0 border-l-4 border-r-4 border-transparent border-solid border-b-8 border-b-black dark:border-b-blue-700 m-8 hidden sm:block"></div>
+            <div className="absolute -bottom-11 -left-4 w-0 h-0 border-l-4 border-r-4 border-transparent border-solid border-b-8 border-b-blue-700 m-8 hidden sm:block"></div>
         </div>
     );
 };
