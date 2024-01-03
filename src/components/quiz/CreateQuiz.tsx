@@ -33,7 +33,7 @@ const CreateQuiz = (props: Props) => {
         defaultValues: {
             topic: "",
             type: "mcq",
-            amount: 5,
+            amount: 3,
         },
     });
 
@@ -41,7 +41,7 @@ const CreateQuiz = (props: Props) => {
         alert(JSON.stringify(values, null, 2));
     }
 
-    // use to rerender form if any component changes
+    // use to rerender form if any component changes-otherwise changes not visible
     form.watch();
 
     return (
@@ -59,7 +59,7 @@ const CreateQuiz = (props: Props) => {
                     <Form {...form}>
                         <form
                             onSubmit={form.handleSubmit(onSubmit)}
-                            className="space-y-8"
+                            className="space-y-6"
                         >
                             <FormField
                                 control={form.control}
@@ -101,11 +101,11 @@ const CreateQuiz = (props: Props) => {
                                                     );
                                                 }}
                                                 min={1}
-                                                max={10}
+                                                max={5}
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            Min-1 | Max-10
+                                            Min-1 | Max-5
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -145,7 +145,7 @@ const CreateQuiz = (props: Props) => {
                                     Ended
                                 </Button>
                             </div>
-                            <Button type="submit" className="w-full" >
+                            <Button type="submit" className="w-full">
                                 Submit
                             </Button>
                         </form>

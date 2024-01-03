@@ -4,6 +4,7 @@ import "../../styles/globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar/Navbar";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,12 +30,12 @@ export default function RootLayout({
                 )}
             >
                 <link rel="icon" href="/fav.png" />
-                
-                    <Providers>
-                        <Navbar />
-                        {children}
-                    </Providers>
-                
+
+                <Providers>
+                    <Navbar />
+                    {children}
+                    <Toaster />
+                </Providers>
             </body>
         </html>
     );
